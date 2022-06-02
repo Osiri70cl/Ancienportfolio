@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6f6f6f;
+
+}
+
+nav h1 {
+    color: #6F6F6F;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 30px;
+
+}
+nav .onglets {
+    margin-top: 3px;
+    margin-left: 300px;
+    
+}
+nav .onglets a{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(salleresto.jpeg);
+    background-size: cover;
+    color: #fff;
+    padding: 40px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 50px;
+    text-shadow: 1px 2px 3px black;
+}
+
+header h4 {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 2px 3px black;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+header button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    outline: none;
+}
+ header button:hover{
+     background-color: black;
+     color: white;
+     cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+ }
+
+
+.main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+
+}
+
+.main .content .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+.main .content .card .left{
+    flex: 0 0 30%;
+    padding: 20px;
+    background: black;
+    color: white;
+
+}
+
+.main .content .card.right{
+    flex: 0 0 70%;
+    
+}
+.main .content .card .right img {
+    height: 300px;
+    width: 400px;
+    margin-top: 5px;
+
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: black;
+    color: white;
+    padding: 30px 100px;
+}
+
+footer h1{
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: solid 1px white;
+    width: 20%;
+    padding-bottom: 5px;
+
+}
+footer .services {
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+footer.services .service {
+    margin-right: 30px;
+    padding: 10px;
+
+
+}
+footer .services .service p{
+    max-width: 3px;
+}
+
+footer #contact {
+    color: rgb(181, 181, 181);
+
+}
+
+footer h3,p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 680px) {
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card{
+        margin: 10px;
+
+    }
+    .main .content .card .right img {
+        height: 200px;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .main .content .card{
+        display:block;
+
+    }
+    footer{
+        padding: 30px;
+
+    }
+}
+

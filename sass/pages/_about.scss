@@ -1,0 +1,44 @@
+
+.about {
+    & .container {
+        padding-top: 3rem;;
+    }
+    &__heading {
+        color: $color-text;
+        @include heading-shadow;
+        text-align: center;
+        padding-right: $grid-gutter;
+
+    }
+    &__imagery {
+        float: right;
+        padding-right: 5rem;
+    }
+    &__pic {
+        overflow:hidden;
+        width: 100%;
+        border-radius: 1000rem;
+        border: 0.5rem solid $color-hover;
+        & img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__copy {
+        grid-area: copy;
+        & p{
+            line-height: 2rem*1.2;
+            margin-bottom: $grid-gutter*2.25;
+            color: $color-text;
+            width: 75%;
+            padding-left: 3rem;
+        }
+    }
+    &__btn{
+        @include btn;
+        grid-area: btn;
+        & a {
+            text-decoration: none;
+        }
+    }
+}

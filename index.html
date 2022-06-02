@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Portfolio Rémi</title>
+
+    <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Importing the hamburger menu icon from remix icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="./sass/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="logo">Rémi . P</a>
+        <input type="checkbox" id="toggler" />
+        <label for="toggler"><i class="ri-menu-line"></i></label>
+        <div class="menu">
+          <ul class="list">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="./other-pages/about.html">About</a></li>
+            <li><a href="./other-pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="portfolio">
+        <div
+          class="image active"
+          style="
+            background: url(./media/basic-pics/salleresto.jpeg) center/cover;
+          "
+        >
+          <div class="text-container">
+            <a href="./projects/Site Vitrine/indexsitevitrine.html">
+              <div class="text">
+                <h3>Site Vitrine</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="image"
+          style="background: url(./media/basic-pics/flexbox.jpeg) center/cover"
+        >
+          <div class="text-container">
+            <a href="./projects/excerciceFlexbox/indexflexbox.html">
+              <div class="text">
+                <h3>Exercice Flexbox</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="image"
+          style="
+            background: url(./media/basic-pics/projetCSS.jpeg) center/cover;
+          "
+        >
+          <div class="text-container">
+            <a href="./projects/premierProjetCss/indexprojet.html">
+              <div class="text">
+                <h3>Premier Projet</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="image"
+          style="
+            background: url(./media/basic-pics/ClosMarsault.jpeg) center/cover;
+          "
+        >
+          <div class="text-container">
+            <a href="./projects/Clos Marsault/indexclos.html">
+              <div class="text">
+                <h3>Clos Marsault</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="image"
+          style="background: url(./media/basic-pics/5.jpg) center/cover"
+        >
+          <div class="text-container">
+            <a href="./projects/Jeux desarmorce/desamorce.html">
+              <div class="text">
+                <h3>Désamorce la bombe (jeu)</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="show-modal">Bienvenue</button>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Bienvenue sur mon portfolio</h1>
+      <p>
+        Bonjour et bienvenue sur mon site internet, et plus précisément mon
+        portfolio. En vous baladant sur ce site, vous pourrez voir mes
+        différents projets, quelques informations me concernant ainsi que mon
+        parcours; et enfin une page pour pouvoir rentrer en contact avec moi.<br />
+        Tous mes projets sont accessibles via la sélection dynamique sur la page
+        principale ("Portfolio"). Il vous suffit de cliquer sur le titre afin
+        d'accéder au projet. Un petit texte explicatif sera disponible pour
+        chaque projets. <br />Les informations me concernant se trouve sur la
+        page "about".<br />
+        Bonne visite 🐱‍🚀
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="./assets/jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/bootstrap.js" type="text/javascript"></script>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>

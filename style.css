@@ -1,0 +1,199 @@
+
+/*# sourceMappingURL=style.css.map */
+
+
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans&display=swap');
+
+/* ******************** BODY + NAV ************** */
+
+body {
+    height: 100vh;
+    font-family: 'Expletus Sans', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #404040;
+    width: 100%;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+}
+
+nav h1 {
+    font-size: 2rem;
+    padding-top: 30px;
+
+
+}
+
+.onglets {
+    float: right;
+    padding-right: 50px;
+    padding-bottom: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 16px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* *************** SECTION PRINCIPALE, MISE EN PLACE DES IMAGES INTERACTIVES + TEXTE MONTANT SUR AXE Y ********** */
+
+section {
+    overflow: hidden;
+    background-color: black;
+
+}
+
+.portfolio {
+    display: flex;
+    min-width: 600px;
+    max-width: 900px;
+    height: 400px;
+    margin: 4rem auto;
+
+}
+
+.image {
+    min-width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.55, 0.61, 0.41, 0.95);
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+/* lorsque classe dans la même balise, elles doivent être collé pour être appelé */
+
+.image.active {
+    flex-grow: 100;
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 7px;
+    background-size: auto 100%;
+}
+
+.image:not(.active){
+    flex-grow: 1;
+    border-radius: 5px;
+
+}
+
+.text-container {
+    width: 100%;
+    height: 400px;
+    padding: 2rem;
+    visibility: hidden;
+    transform: translateY(400px);
+    opacity: 0;
+    transition: all .4s ease;
+    background: linear-gradient(354deg, black 0%, transparent 72%);
+    color: white;
+    overflow: hidden;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.text-container a{
+    color: white;
+    
+    
+}
+
+.text {
+    position: absolute;
+    bottom: 5rem;
+}
+
+.active .text-container{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* ****************** FOOTER ********************** */
+
+footer {
+    background-color: #404040;
+    color: white;
+    padding: 2%;
+    text-align: center;
+}
+
+#coordonnees {
+    color: white;
+    text-align: center;
+}
+
+#email {
+    padding-left: 25%;
+    text-indent: 2rem;
+}
+
+#adresse {
+    padding-right: 25%;
+    text-indent: 2rem;
+}
+
+#reseaux {
+    padding-left: 25%;
+    text-indent: 2rem;
+}
+
+#telephone {
+    padding-right: 25%;
+    text-indent: 2rem;
+}
+
+
+
+#TraitCoo {
+    height: 1px;
+    width: 75%;
+    margin: 60px auto;
+    background-color: #fffae1;
+    box-shadow: 1px 3px 2px black;
+}
+
+
+
+#deuxiemeTrait {
+    height: 1px;
+    width: 75%;
+    margin: 60px auto;
+    background-color: #fffae1;
+    box-shadow: 1px 3px 2px black;
+}
+
+/* ********************* RESPONSIVE TELEPHONE ************** */
+/* ******** reste à régler le problème des images qui se barrent à droite ********/
+
+@media screen and (max-width: 600px){
+    .core .portfolio{
+        margin: 10px;
+        flex-direction: column;
+        min-height: 80vh;
+        position: relative;
+        width: 100%;
+
+    }
+    .core .portfolio .text-container .text {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        color: #fff;
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+
+
+
+}
+

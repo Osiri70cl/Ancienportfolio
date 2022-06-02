@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+}
+
+.container {
+  padding-top: 15rem;
+}
+
+#value {
+  font-size: 8rem;
+}
+
+.button-container {
+  padding: 2rem;
+}
+
+.btn {
+  margin-left: 1rem;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-color: rgba(116, 116, 116, 0.5);
+  font-size: 1.3rem;
+  background-color: rgba(116, 116, 116, 0.5);
+}
+.decrease:hover {
+  transition: ease-in-out 0.3s;
+  background-color: red;
+  color: white;
+}
+
+.increase:hover {
+  transition: ease-in-out 0.3s;
+  background-color: green;
+  color: white;
+}
+
+.reset:hover {
+  transition: ease-in-out 0.3s;
+  background-color: black;
+  color: white;
+}

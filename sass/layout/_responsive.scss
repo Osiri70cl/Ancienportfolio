@@ -1,0 +1,215 @@
+@media #{$medium-down} {
+  .container .portfolio {
+    margin: 10px;
+    flex-direction: column;
+    min-height: 80vh;
+    position: relative;
+    width: 10px;
+    & .image {
+      width: 60%;
+    }
+  }
+  .container .portfolio .text-container .text {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: $color-hover;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+  .menu {
+    width: 100%;
+    max-height: 0; /*Makes the max-height 0 to side the expanded menu.*/
+    overflow: hidden; /*Hides the overflowing content.*/
+  }
+  .list {
+    flex-direction: column; /*Chances the direction of the flex container. By default it is a row so we change it to column in small screens.*/
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex; /*Makes it an inline flex container for the icon. Used for centering the icon inside this box.*/
+    align-items: center;
+    cursor: pointer;
+    color: white;
+  }
+  /* 
+        The general sibling selector (~) selects all elements that are next siblings of #toggler.
+        In this case we target the .menu and we turn the height back to 100% to show the menu.
+    */
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+  .form {
+    padding-bottom: $grid-gutter;
+    width: 75%;
+    padding-left: 1.6rem;
+    &__heading {
+      text-align: center;
+      width: 100%;
+      color: $color-text;
+      background: $color-form-lighter;
+      line-height: 3rem;
+      padding: $grid-gutter;
+      height: 40px;
+    }
+    &__field {
+      & label {
+        color: $color-form-lighter;
+        display: block;
+        font-size: 2rem;
+        line-height: 2rem;
+        padding-top: $grid-gutter;
+        height: 30px;
+      }
+      & input {
+        width: 100%;
+        background: $color-form-light;
+        @include border;
+        padding: $grid-gutter;
+        color: $color-hover;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 2.75rem;
+        @include border;
+        background-color: $color-form-light;
+        color: $color-primary;
+        height: 30px;
+      }
+      & textarea {
+        width: 100%;
+        color: $color-primary;
+        background: $color-form-light;
+        @include border;
+        outline: none;
+        padding: $grid-gutter;
+        margin-bottom: $grid-gutter * 0.5;
+        resize: none;
+        height: 60px;
+      }
+    }
+  }
+  .about {
+    &__heading {
+      color: $color-text;
+      @include heading-shadow;
+      text-align: center;
+      padding-right: $grid-gutter;
+    }
+    &__imagery {
+      float: right;
+      padding-right: 6rem;
+    }
+    &__pic {
+      overflow: hidden;
+      width: 75%;
+      border-radius: 1000rem;
+      border: 0.5rem solid $color-hover;
+      & img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__copy {
+      grid-area: copy;
+      & p {
+        line-height: 2rem * 1.2;
+        margin-bottom: $grid-gutter * 2.25;
+        color: $color-text;
+        width: 75%;
+        padding-left: 3rem;
+      }
+    }
+    &__btn {
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+      width: 75%;
+      @include btn;
+      grid-area: btn;
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+  .show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    margin: 5rem 0 2rem 5rem;
+    border: none;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10rem;
+    cursor: pointer;
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+    background-color: rgba(255, 255, 255, 0.774);
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    & h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 2.8rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}
+
+@media #{$medium-up} {
+  .form {
+    width: 50%;
+    padding-bottom: $grid-gutter;
+    padding-left: 28rem;
+  }
+  .about {
+    &__btn {
+      margin-left: 10rem;
+      @include btn;
+      grid-area: btn;
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media #{$medium-middle} {
+  .container .portfolio {
+    padding-left: 8rem;
+    margin: 10px;
+    flex-direction: column;
+    min-height: 80vh;
+    position: relative;
+    width: 10px;
+    & .image {
+      width: 100%;
+    }
+  }
+  .container .portfolio .text-container .text {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: $color-hover;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+}

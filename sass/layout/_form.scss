@@ -1,0 +1,47 @@
+
+.form {
+    width: 50%;
+    padding-bottom: $grid-gutter;
+    /*padding-left: 28rem; */
+    &__heading {
+        text-align: center;
+        width: 100%;
+        color: $color-text;
+        background: $color-form-lighter;
+        line-height: 5rem;
+        padding: $grid-gutter;
+    }
+    &__field {
+        & label {
+            color: $color-form-lighter;
+            display: block;
+            font-size: 2rem;
+            line-height: 2rem;
+            padding-top: $grid-gutter;
+        }
+        & input {
+            width: 100%;
+            background: $color-form-light;
+            @include border;
+            padding: $grid-gutter;
+            color: $color-hover;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 2.75rem;
+            @include border;
+            background-color: $color-form-light;
+            color: $color-primary;
+
+        }
+        & textarea {
+            width: 100%;
+            color: $color-primary;
+            background: $color-form-light;
+            @include border;
+            outline: none;
+            padding: $grid-gutter;
+            margin-bottom: $grid-gutter*0.5;
+            resize: none;
+        }
+    }
+}
