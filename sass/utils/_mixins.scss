@@ -23,33 +23,4 @@
   color: #444;
   border-radius: 10rem;
   cursor: pointer;
-
-  /*display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: rgb(160, 51, 0);
-    outline: 2px solid rgb(255, 150, 64);
-    padding: 30px 60px;
-    position: relative;
-    overflow: hidden;
-    transition: color 1s;
-    &:hover {
-        color: #833ab4;
-        &::before{
-            width: 150%;
-        }
-    }
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -50px;
-        width: 0;
-        height: 100%;
-        background-color: rgb(230, 4, 4);
-        transform: skewX(35deg);
-        z-index: -1;
-        transition: width 1s;
-    } */
 }

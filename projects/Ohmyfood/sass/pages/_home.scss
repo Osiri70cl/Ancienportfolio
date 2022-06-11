@@ -1,0 +1,280 @@
+.loader-mask {
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loading-mask 1.2s forwards ease-out;
+}
+
+.loading-spinner {
+  position: absolute;
+  font-size: 10em;
+  color: $color-tertiary;
+  animation: loading-spinner 1.2s both;
+}
+
+.main-home {
+  & > *:not(.user-location) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  @include phone-screen {
+    & > *:not(.user-location) {
+      padding-top: 2.5em;
+      padding-bottom: 3em;
+    }
+  }
+}
+
+.home__buttons--pink {
+  @include buttons--pink;
+}
+
+.user-location {
+  display: flex;
+  background: darken($color: $gray, $amount: 10%);
+  height: 4em;
+  @include center-xy;
+
+  &__pin {
+    padding-right: 1em;
+  }
+}
+
+.home-presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include desktop-screen {
+    margin-bottom: 0.2em;
+  }
+}
+
+.home-fonctionnement {
+  background-color: white;
+  min-width: 19em;
+  width: 100%;
+
+  @include desktop-screen {
+    margin-bottom: 0;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.fonctionnement-buttons {
+  @include desktop-screen {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @include phone-screen {
+    margin-left: 0.5em;
+  }
+
+  @include desktop-screen {
+    & p {
+      white-space: nowrap;
+    }
+  }
+
+  &__button {
+    background-color: $gray;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 4em;
+    margin-top: 1.2em;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include drop-shadow;
+
+    @include desktop-screen {
+      padding-right: 2.5em;
+      margin-bottom: 1em;
+      max-width: 30%;
+    }
+
+    @include tablet-screen {
+      max-width: 20em;
+    }
+
+    &:hover i {
+      color: $color-primary;
+    }
+
+    &:hover {
+      background-color: lighten($color: $color-primary, $amount: 35%);
+    }
+  }
+
+  &__numbers {
+    position: absolute;
+    text-align: center;
+    left: -1em;
+    bottom: 1em;
+    background-color: $color-primary;
+    color: white;
+    border-radius: 50%;
+    height: 1.8em;
+    width: 1.8em;
+    padding: 0.4em;
+    font-weight: normal;
+  }
+
+  &__icons {
+    color: darken($color: $gray, $amount: 50%);
+    font-size: 18px;
+    margin-left: 2em;
+    margin-right: 1em;
+
+    @include desktop-screen {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+  }
+}
+
+.home-restaurants {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+
+  @include desktop-screen {
+    margin-bottom: 2em;
+  }
+
+  & h2 {
+    margin-bottom: 0;
+
+    @include desktop-screen {
+      text-align: center;
+    }
+  }
+}
+
+.restaurants-cards {
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 2em;
+  min-width: 18em;
+  width: 100%;
+  @include drop-shadow;
+  @include all-corners-round;
+
+  @include desktop-screen {
+    width: 40%;
+
+    &--desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__img-block {
+    position: relative;
+  }
+
+  &__img {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+
+    @include desktop-screen {
+      height: 16em;
+    }
+  }
+
+  &__new-label {
+    cursor: pointer;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 35%);
+    position: absolute;
+    padding: 0.5em;
+    top: 1em;
+    right: 1em;
+    font-weight: bold;
+    border-radius: 3px;
+    @include drop-shadow;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5em;
+  }
+
+  &__text > * {
+    white-space: nowrap;
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__text > p {
+    margin-top: 5px;
+  }
+
+  &__heart {
+    margin-right: 5%;
+  }
+}
+
+.fa-heart {
+  font-size: 2.2em;
+}
+
+.restaurants-cards__heart > .fa-solid {
+  opacity: 0;
+  cursor: pointer;
+  &:hover {
+    animation: fill 0.4s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background: linear-gradient(
+      to left,
+      #9356dc,
+      #b35cdc,
+      #cf64dc,
+      #e86edb,
+      #ff79da
+    );
+    background: -webkit-linear-gradient(
+      to left,
+      #9356dc,
+      #b35cdc,
+      #cf64dc,
+      #e86edb,
+      #ff79da
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  &:active {
+    color: transparent;
+    background-image: linear-gradient($color-primary 15%, $color-secondary);
+    animation: fill-heart 0.3s;
+    background-clip: text;
+    animation-fill-mode: forwards;
+  }
+}

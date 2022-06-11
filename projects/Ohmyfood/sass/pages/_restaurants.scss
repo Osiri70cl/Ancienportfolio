@@ -1,0 +1,271 @@
+html {
+  background-color: $gray;
+}
+
+.restaurants-page {
+  &__whole-menu {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    position: relative;
+    bottom: 3em;
+
+    @include tablet-screen {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+
+    @include desktop-screen {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  &__top-img {
+    padding: 0;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+
+      @include phone-screen {
+        height: 15em;
+      }
+
+      @include tablet-screen {
+        height: 10em;
+      }
+
+      @include desktop-screen {
+        height: 20em;
+      }
+    }
+  }
+}
+
+.restaurants-pages__section {
+  margin-bottom: 2em;
+
+  &:nth-child(2) {
+    @include load-course;
+    animation-delay: $animation__load-course--delay;
+  }
+
+  &:nth-child(3) {
+    @include load-course;
+    animation-delay: (
+      $animation__load-course--delay + $animation__load-course--duration
+    );
+  }
+
+  &:nth-child(4) {
+    @include load-course;
+    animation-delay: (
+      $animation__load-course--delay + $animation__load-course--duration * 2
+    );
+  }
+
+  @include tablet-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desktop-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.restaurant-name__title {
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+  justify-content: center;
+
+  @include phone-screen {
+    justify-content: space-between;
+  }
+
+  & h1 {
+    font-weight: normal;
+    font-size: 1.8em;
+
+    @include desktop-screen {
+      margin-right: 1em;
+    }
+
+    @include tablet-screen {
+      margin-right: 1.5em;
+    }
+  }
+
+  & .restaurants-cards__heart {
+    margin-right: 0;
+    &:hover {
+      overflow: hidden;
+    }
+  }
+}
+
+.course-category__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 0;
+  position: relative;
+
+  @include tablet-screen {
+    margin-top: 0;
+  }
+
+  &:after {
+    content: "";
+    height: 0.2em;
+    width: 2.5em;
+    background-color: $color-tertiary;
+    position: absolute;
+    left: 0;
+    bottom: -0.4em;
+  }
+  @include desktop-screen {
+    margin-bottom: 2rem;
+  }
+}
+
+.course-container {
+  justify-content: space-between;
+  margin-top: 1em;
+  @include cards-width;
+  position: relative;
+
+  @include desktop-screen {
+    margin-right: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  &__description-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    background-color: white;
+    z-index: -1;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    @include desktop-screen {
+      width: 30em;
+    }
+  }
+
+  &__text > * {
+    white-space: nowrap;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    padding-right: 1em;
+  }
+
+  &__description-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95em;
+  }
+
+  &__prices {
+    font-weight: bold;
+  }
+  &--desktop-flex {
+    @include desktop-screen {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.restaurants__buttons {
+  &--margin {
+    margin-top: 4em;
+    text-align: center;
+
+    @include tablet-screen {
+      margin-top: 0;
+    }
+  }
+
+  &--pink {
+    @include buttons--pink;
+    padding: 1em 3em 1em 3em;
+  }
+}
+
+.couche-sup {
+  @include drop-shadow;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $color-tertiary;
+  height: 100%;
+
+  @include desktop-screen {
+    width: 25em;
+    margin: 7px;
+  }
+
+  & .couche-mid {
+    animation: cards-check-out $cards-animation-duration forwards ease-in-out;
+  }
+
+  & .course-container__text {
+    animation: cards-pushed-out $cards-animation-duration forwards ease-in-out;
+  }
+}
+
+.couche-mid {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  background-clip: text;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  color: white;
+  font-size: 2em;
+}
+
+.couche-sup:hover {
+  & .couche-mid {
+    animation: cards-check-in $cards-animation-duration forwards ease-in-out;
+  }
+
+  & .course-container__text {
+    animation: cards-pushed-in $cards-animation-duration forwards ease-in-out;
+  }
+
+  & .check-icon-rotation {
+    animation: check-rotation $cards-animation-duration forwards ease-in-out;
+    animation-delay: 0.1s;
+  }
+}
+
+.check-icon-rotation {
+  overflow: hidden;
+}

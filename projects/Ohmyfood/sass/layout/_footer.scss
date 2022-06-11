@@ -1,0 +1,23 @@
+.footer {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background-color: #353535;
+  color: white;
+  &__logo {
+    font-family: "shrikhand";
+    font-weight: 500;
+    padding-top: 1em;
+  }
+  &__links {
+    padding-bottom: 1em;
+  }
+
+  @include desktop-screen {
+    text-align: center;
+  }
+
+  @include tablet-screen {
+    text-align: center;
+  }
+}
