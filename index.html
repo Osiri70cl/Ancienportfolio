@@ -1,152 +1,243 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-T89EZDQVVP"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-T89EZDQVVP");
-    </script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <!-- Importing the hamburger menu icon from remix icon CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link href="./css/main.css" rel="stylesheet" />
-
-    <title>Portfolio Rémi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./script.js"></script>
+    <title>Portfolio - Rémi</title>
   </head>
+  <body
+    id="page-top"
+    class="index"
+    data-pinterest-extension-installed="cr1.3.4"
+  >
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
 
-  <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="#" class="logo">Rémi . P</a>
-        <input type="checkbox" id="toggler" />
-        <label for="toggler"><i class="ri-menu-line"></i></label>
-        <div class="menu">
-          <ul class="list">
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="./other-pages/about.html">About</a></li>
-            <li><a href="./other-pages/contact.html">Contact</a></li>
-          </ul>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Hello, Bonjour</div>
+          <div class="intro-heading">
+            Je m'appelle Rémi et je vous souhaite la bienvenue sur mon Portfolio
+            !
+          </div>
         </div>
-      </nav>
+      </div>
     </header>
-    <section class="container">
-      <div class="portfolio">
-        <div
-          class="image active"
-          style="
-            background: url(./projects/Booki/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg)
-              center/cover;
-          "
-        >
-          <div class="text-container">
-            <a href="./projects/Booki/PINCE_Remi_1_index_052022.html">
-              <div class="text">
-                <h3>Booki</h3>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">PORTFOLIO</h2>
+        <h3 class="section-subheading text-muted">
+          Vous trouverez ici tous mes projets réalisés.
+        </h3>
+      </div>
+      <div class="app-main-left cards-area">
+        <div class="card-wrapper main-card">
+          <a
+            class="card cardItem"
+            href="./projects/Booki/PINCE_Remi_1_index_052022.html"
+          >
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/images/coverBooki.jpg"
+                alt="lit de chambre d'hotel"
+              />
+            </div>
+            <div class="card-info">
+              <div class="card-text big cardText">BOOKI</div>
+            </div>
+          </a>
+        </div>
+        <div class="card-wrapper main-card">
+          <a class="card cardItemjs" href="./projects/Ohmyfood/index.html">
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/images/coverOhmyfood.jpg"
+                alt="image d'un plat"
+              />
+            </div>
+            <div class="card-info">
+              <div class="card-text big cardText">Ohmyfood !</div>
+            </div>
+          </a>
+        </div>
+        <div class="card-wrapper main-card">
+          <a class="card cardItem" href="#">
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/images/agence-la-panthere.svg"
+                alt="Logo agence la Panthère"
+              />
+            </div>
+            <div class="card-info">
+              <div class="card-text big cardText">Agence La Panthère</div>
+            </div>
+          </a>
+        </div>
+        <div class="card-wrapper main-card">
+          <a
+            class="card cardItem"
+            href="./projects/Jeux desarmorce/desamorce.html"
+          >
+            <div class="card-image-wrapper">
+              <img src="./assets/images/bombe1_.png" alt="bombe" />
+            </div>
+            <div class="card-info">
+              <div class="card-text big cardText">
+                Jeux désarmocer la bombe !
               </div>
-            </a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">About</h2>
+            <h3 class="section-subheading text-muted">
+              Voici mon parcourt scolaire et professionnel.
+            </h3>
           </div>
         </div>
-
-        <div
-          class="image"
-          style="
-            background: url(./projects/Ohmyfood/images/restaurants/francaise_l.jpg)
-              center/cover;
-          "
-        >
-          <div class="text-container">
-            <a href="./projects/Ohmyfood/index.html">
-              <div class="text">
-                <h3>Ohmyfood</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="image"
-          style="
-            background: url(./media/basic-pics/projetCSS.jpeg) center/cover;
-          "
-        >
-          <div class="text-container">
-            <a href="./projects/premierProjetCss/indexprojet.html">
-              <div class="text">
-                <h3>Premier Projet</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="image"
-          style="
-            background: url(./media/basic-pics/ClosMarsault.jpeg) center/cover;
-          "
-        >
-          <div class="text-container">
-            <a href="./projects/Clos Marsault/indexclos.html">
-              <div class="text">
-                <h3>Clos Marsault</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="image"
-          style="background: url(./media/basic-pics/5.jpg) center/cover"
-        >
-          <div class="text-container">
-            <a href="./projects/Jeux desarmorce/desamorce.html">
-              <div class="text">
-                <h3>Désamorce la bombe (jeu)</h3>
-              </div>
-            </a>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img
+                    class="img-circle img-responsive"
+                    src="img/about/1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2014-2015</h4>
+                    <h4 class="subheading">STI2D</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sunt ut voluptatum eius sapiente, totam reiciendis
+                      temporibus qui quibusdam, recusandae sit vero unde, sed,
+                      incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img
+                    class="img-circle img-responsive"
+                    src="img/about/2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2016-2020</h4>
+                    <h4 class="subheading">Kedge</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sunt ut voluptatum eius sapiente, totam reiciendis
+                      temporibus qui quibusdam, recusandae sit vero unde, sed,
+                      incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img
+                    class="img-circle img-responsive"
+                    src="img/about/3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Septembre 2020 à 2021</h4>
+                    <h4 class="subheading">Orange</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sunt ut voluptatum eius sapiente, totam reiciendis
+                      temporibus qui quibusdam, recusandae sit vero unde, sed,
+                      incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img
+                    class="img-circle img-responsive"
+                    src="img/about/4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2022</h4>
+                    <h4 class="subheading">Open classrooms</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sunt ut voluptatum eius sapiente, totam reiciendis
+                      temporibus qui quibusdam, recusandae sit vero unde, sed,
+                      incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>To <br />The <br />future!</h4>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-    <button class="show-modal">Bienvenue</button>
 
-    <div class="modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>Bienvenue sur mon portfolio</h1>
-      <p>
-        Bonjour et bienvenue sur mon site internet, et plus précisément mon
-        portfolio. En vous baladant sur ce site, vous pourrez voir mes
-        différents projets, quelques informations me concernant ainsi que mon
-        parcours; et enfin une page pour pouvoir rentrer en contact avec moi.<br />
-        Tous mes projets sont accessibles via la sélection dynamique sur la page
-        principale ("Portfolio"). Il vous suffit de cliquer sur le titre afin
-        d'accéder au projet. Un petit texte explicatif sera disponible pour
-        chaque projets. <br />Les informations me concernant se trouve sur la
-        page "about".<br />
-        Bonne visite 🐱‍🚀
-      </p>
-    </div>
-    <div class="overlay hidden"></div>
-
-    <script src="./assets/jquery.min.js" type="text/javascript"></script>
-    <script src="./assets/bootstrap.js" type="text/javascript"></script>
-    <script src="./script.js" type="text/javascript"></script>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

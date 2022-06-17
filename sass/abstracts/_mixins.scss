@@ -1,0 +1,31 @@
+@mixin global-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@mixin phone-screen {
+  @media screen and (max-width: map-get($breakpoints-max, phone)) {
+    @content;
+  }
+}
+
+@mixin tablet-screen {
+  @media screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-screen {
+  @media screen and (min-width: map-get($breakpoints-min, desktop)) {
+    @content;
+  }
+}
+
+@mixin center-xy {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin drop-shadow {
+  box-shadow: -2px 5px 15px -10px black;
+}
