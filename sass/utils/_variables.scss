@@ -1,15 +1,14 @@
-$color-primary: #000000;
-$color-text: white;
-$color-hover: rgb(252, 71, 0);
-$color-active: rgb(255, 136, 57);
-$color: rgba(255, 255, 255, 0.555);
-$color-form-lighter : rgb(201, 141, 85);
-$color-form-light: rgb(209, 159, 111);
+$color-primary: #1ee2e7;
+$color-secondary: #8f8f8f50;
+$color-tertiary: #777;
+$gray: #f8f8f8f5;
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
+$breakpoints-min: (
+  tablet: 767px,
+  desktop: 992px,
+);
 
-$medium-up :"only screen and (min-width : 768px)";
-$medium-down :"only screen and (max-width : 600px)";
-$medium-middle:"only screen and (max-width : 895px) and (min-width: 600px)";
+$breakpoints-max: (
+  phone: 766px,
+  tablet: 991px,
+);

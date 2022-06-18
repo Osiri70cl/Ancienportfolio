@@ -1,26 +1,31 @@
-@mixin heading-shadow(
-  $color: lightness-shift($color-primary),
-  $offset: $heading-shadow-size
-) {
-  text-shadow: $offset $offset $color;
+@mixin global-padding {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-@mixin text-shadow {
-  text-shadow: 3px 5px 2px #474747, 5px 7px 0px #ff8b29;
+@mixin phone-screen {
+  @media screen and (max-width: map-get($breakpoints-max, phone)) {
+    @content;
+  }
 }
 
-@mixin border($color: $color-primary) {
-  border: 0.1rem solid $color;
+@mixin tablet-screen {
+  @media screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tablet)) {
+    @content;
+  }
 }
 
-@mixin btn {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.75rem 3.5rem;
-  margin: 5rem 0 2rem 25rem;
-  border: none;
-  background-color: #fff;
-  color: #444;
-  border-radius: 10rem;
-  cursor: pointer;
+@mixin desktop-screen {
+  @media screen and (min-width: map-get($breakpoints-min, desktop)) {
+    @content;
+  }
+}
+
+@mixin center-xy {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin drop-shadow {
+  box-shadow: -2px 5px 15px -10px black;
 }

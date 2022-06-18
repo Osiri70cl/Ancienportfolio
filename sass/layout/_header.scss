@@ -12,7 +12,7 @@ nav {
       padding-top: 20px;
       color: #fff;
       &:hover {
-        color: $color-primary;
+        border-bottom: $color-primary solid 1px;
       }
     }
   }
