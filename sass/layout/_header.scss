@@ -11,8 +11,11 @@ nav {
       width: 200px;
       padding-top: 20px;
       color: #fff;
+      & a:hover {
+        border-bottom: $color-primary solid 2px;
+      }
       &:hover {
-        border-bottom: $color-primary solid 1px;
+        background-color: rgba(126, 126, 126, 0.329);
       }
     }
   }
